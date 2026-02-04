@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.12' apply false
+    id 'io.spring.dependency-management' version '1.1.4' apply false
+}
+
+allprojects {
+    group = 'com.example'
+    version = '1.0-SNAPSHOT'
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin('java')) {
+            project.extensions.findByType(JavaPluginExtension)?.setSourceCompatibility(JavaVersion.VERSION_17)
+            project.extensions.findByType(JavaPluginExtension)?.setTargetCompatibility(JavaVersion.VERSION_17)
+        }
+    }
+}

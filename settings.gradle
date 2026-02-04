@@ -1,0 +1,2 @@
+rootProject.name = 'payment-platform'
+include 'payments-a', 'payments-b', 'wallet-service', 'payment-platform-service', 'braintree-gateway', 'chase-gateway', 'orbital-gateway'

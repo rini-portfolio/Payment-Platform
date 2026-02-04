@@ -1,0 +1,10 @@
+# Maven
+/target/
+**/target/
+
+# IntelliJ
+*.iml
+.idea/
+
+# Mac
+.DS_Store
